@@ -1,6 +1,7 @@
 object FMenu: TFMenu
   Left = 0
   Top = 0
+  ActiveControl = edtCliNome
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Cadastro de Cliente'
@@ -178,12 +179,6 @@ object FMenu: TFMenu
       Position.X = 117.000000000000000000
       Position.Y = 141.000000000000000000
     end
-    object edtEndEstado: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 9
-      Position.X = 117.000000000000000000
-      Position.Y = 165.000000000000000000
-    end
     object edtEndPais: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 10
@@ -311,6 +306,39 @@ object FMenu: TFMenu
       StyleLookup = 'searcheditbutton'
       TabOrder = 19
       Text = 'Button1'
+    end
+    object edtEndEstado: TComboBox
+      Items.Strings = (
+        'AC'
+        'AL'
+        'AP'
+        'AM'
+        'BA'
+        'CE'
+        'DF'
+        'ES'
+        'GO'
+        'MA'
+        'MT'
+        'MS'
+        'MG'
+        'PA'
+        'PB'
+        'PR'
+        'PE'
+        'PI'
+        'RJ'
+        'RN'
+        'RS'
+        'RO'
+        'RR'
+        'SC'
+        'SP'
+        'SE'
+        'TO')
+      Position.X = 117.000000000000000000
+      Position.Y = 165.000000000000000000
+      TabOrder = 9
     end
   end
   object Panel2: TPanel

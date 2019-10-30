@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, Client.VO,
-  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit;
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit, System.RegularExpressions,
+  Winapi.Windows, FMX.ListBox;
 
 type
   TFMenu = class(TForm)
@@ -28,7 +29,6 @@ type
     edtEndComplemento: TEdit;
     edtEndBairro: TEdit;
     edtEndCidade: TEdit;
-    edtEndEstado: TEdit;
     edtEndPais: TEdit;
     Label7: TLabel;
     Label8: TLabel;
@@ -43,6 +43,7 @@ type
     btnSalvar: TButton;
     btnSair: TButton;
     Button1: TButton;
+    edtEndEstado: TComboBox;
     procedure btnNovoClick(Sender: TObject);
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -55,6 +56,7 @@ type
     procedure LimpaEstanciaObjeto;
 
     procedure ValidarNumeros(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    procedure ValidarEmail(Sender: TObject);
   public
     { Public declarations }
   end;
@@ -83,6 +85,10 @@ begin
   edtCliTelefone.OnKeyDown := ValidarNumeros;
   edtEndCEP.OnKeyDown      := ValidarNumeros;
   edtEndNumero.OnKeyDown   := ValidarNumeros;
+  edtCliEmail.OnExit       := ValidarEmail;
+
+  LimparControles;
+  LimpaEstanciaObjeto;
 end;
 
 procedure TFMenu.LimpaEstanciaObjeto;
@@ -114,8 +120,23 @@ begin
   edtEndComplemento.Text := '';
   edtEndBairro.Text      := '';
   edtEndCidade.Text      := '';
-  edtEndEstado.Text      := '';
+  edtEndEstado.ItemIndex := -1;
   edtEndPais.Text        := '';
+end;
+
+procedure TFMenu.ValidarEmail(Sender: TObject);
+var
+  RegEx: TRegEx;
+begin
+  if TEdit(Sender).Text <> '' then
+  begin
+    RegEx  := TRegex.Create('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]*[a-zA-Z0-9]+$');
+    if not RegEx.Match(TEdit(Sender).Text).Success then
+    begin
+      ShowMessage('Email inválido.');
+      TEdit(Sender).Text := '';
+    end;
+  end;
 end;
 
 procedure TFMenu.ValidarNumeros(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
