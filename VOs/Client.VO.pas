@@ -13,13 +13,13 @@ type
     { private declarations }
     FNome: string;
     FIdentidade: Integer;
-    FCPF: Integer;
+    FCPF: Int64;
     FTelefone: string;
     FEmail: string;
     FEndereco: TAddressVO;
     procedure SetNome(const Value: string);
     procedure SetIdentidade(const Value: Integer);
-    procedure SetCPF(const Value: Integer);
+    procedure SetCPF(const Value: Int64);
     procedure SetTelefone(const Value: string);
     procedure SetEmail(const Value: string);
     procedure SetEndereco(const Value: TAddressVO);
@@ -30,7 +30,7 @@ type
     [RequiredValidation('AttributesValidation', 'Firstname is required')]
     property Nome : string read FNome write SetNome;
     property Identidade : Integer read FIdentidade write SetIdentidade;
-    property CPF : Integer read FCPF write SetCPF;
+    property CPF : Int64 read FCPF write SetCPF;
     property Telefone : string read FTelefone write SetTelefone;
     property Email : string read FEmail write SetEmail;
     property Endereco : TAddressVO read FEndereco write SetEndereco;
@@ -79,7 +79,7 @@ implementation
 
 { TClientVO }
 
-procedure TClientVO.SetCPF(const Value: Integer);
+procedure TClientVO.SetCPF(const Value: Int64);
 begin
   FCPF := Value;
 end;

@@ -20,10 +20,10 @@ object FMenu: TFMenu
     Size.PlatformDefault = False
     TabOrder = 0
     object Label1: TLabel
-      Align = Center
+      Align = Contents
       StyledSettings = [Family]
-      Size.Width = 292.000000000000000000
-      Size.Height = 17.000000000000000000
+      Size.Width = 600.000000000000000000
+      Size.Height = 41.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 20.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -141,7 +141,9 @@ object FMenu: TFMenu
       TabOrder = 3
       Position.X = 117.000000000000000000
       Position.Y = 21.000000000000000000
+      TextPrompt = 'CEP'
       KillFocusByReturn = True
+      OnKeyDown = edtEndCEPKeyDown
     end
     object edtEndLogradouro: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -151,12 +153,14 @@ object FMenu: TFMenu
       Size.Width = 444.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
+      TextPrompt = 'Logradouro'
     end
     object edtEndNumero: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 5
       Position.X = 117.000000000000000000
       Position.Y = 69.000000000000000000
+      TextPrompt = 'N'#250'mero'
     end
     object edtEndComplemento: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -166,24 +170,28 @@ object FMenu: TFMenu
       Size.Width = 444.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
+      TextPrompt = 'Complemento'
     end
     object edtEndBairro: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 7
       Position.X = 117.000000000000000000
       Position.Y = 117.000000000000000000
+      TextPrompt = 'Bairro'
     end
     object edtEndCidade: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 8
       Position.X = 117.000000000000000000
       Position.Y = 141.000000000000000000
+      TextPrompt = 'Cidade'
     end
     object edtEndPais: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 10
       Position.X = 117.000000000000000000
       Position.Y = 189.000000000000000000
+      TextPrompt = 'Pais'
     end
     object Label7: TLabel
       StyledSettings = [Family, Size, FontColor]
@@ -297,7 +305,7 @@ object FMenu: TFMenu
       Text = 'Pais:'
       TabOrder = 18
     end
-    object Button1: TButton
+    object btnConsultaCEP: TButton
       Position.X = 217.000000000000000000
       Position.Y = 22.000000000000000000
       Size.Width = 20.000000000000000000
@@ -305,7 +313,8 @@ object FMenu: TFMenu
       Size.PlatformDefault = False
       StyleLookup = 'searcheditbutton'
       TabOrder = 19
-      Text = 'Button1'
+      Text = 'btnConsultaCEP'
+      OnClick = btnConsultaCEPClick
     end
     object edtEndEstado: TComboBox
       Items.Strings = (
@@ -368,6 +377,7 @@ object FMenu: TFMenu
       StyleLookup = 'toolbutton'
       TabOrder = 1
       Text = 'Salvar'
+      OnClick = btnSalvarClick
     end
     object btnSair: TButton
       Position.X = 552.000000000000000000
@@ -380,5 +390,69 @@ object FMenu: TFMenu
       Text = 'Sair'
       OnClick = btnSairClick
     end
+  end
+  object RESTRequest: TRESTRequest
+    AcceptEncoding = 'UTF-8'
+    Client = RESTClient
+    Params = <>
+    Response = RESTResponse
+    SynchronizedEvents = False
+    Left = 320
+    Top = 271
+  end
+  object RESTClient: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'UTF-8, *;q=0.8'
+    AcceptEncoding = 'UTF-8'
+    Params = <>
+    RaiseExceptionOn500 = False
+    Left = 352
+    Top = 271
+  end
+  object RESTResponse: TRESTResponse
+    Left = 384
+    Top = 271
+  end
+  object BindingsList: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 415
+    Top = 271
+  end
+  object IdSMTP: TIdSMTP
+    SASLMechanisms = <>
+    Left = 320
+    Top = 320
+  end
+  object IdMessage: TIdMessage
+    AttachmentEncoding = 'MIME'
+    BccList = <>
+    CCList = <>
+    Encoding = meDefault
+    FromList = <
+      item
+      end>
+    Recipients = <>
+    ReplyTo = <>
+    ConvertPreamble = True
+    Left = 352
+    Top = 320
+  end
+  object IdServerIOHandlerSSLOpenSSL: TIdServerIOHandlerSSLOpenSSL
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    Left = 384
+    Top = 320
+  end
+  object IdSSLIOHandlerSocket: TIdSSLIOHandlerSocketOpenSSL
+    MaxLineAction = maException
+    Port = 0
+    DefaultPort = 0
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    Left = 416
+    Top = 320
   end
 end

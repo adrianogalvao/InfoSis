@@ -1,19 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2019/10/29 22:10:43.172,=D:\[5] - Sistemas\[5] - Sistemas\Unit1.pas</Transaction>
-    <Transaction>2019/10/29 22:31:39.218,=D:\[5] - Sistemas\[5] - Sistemas\Unit2.pas</Transaction>
-    <Transaction>2019/10/29 22:33:13.326,C:\Users\Adriano Galvão\Documents\InfoSistemas\Client.VO.pas=D:\[5] - Sistemas\[5] - Sistemas\Unit2.pas</Transaction>
-    <Transaction>2019/10/29 23:25:24.356,C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.pas=D:\[5] - Sistemas\[5] - Sistemas\Unit1.pas</Transaction>
-    <Transaction>2019/10/29 23:25:24.356,C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.fmx=D:\[5] - Sistemas\[5] - Sistemas\Unit1.fmx</Transaction>
-    <Transaction>2019/10/29 23:25:39.064,C:\Users\Adriano Galvão\Documents\InfoSistemas\VOs\Client.VO.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Client.VO.pas</Transaction>
-    <Transaction>2019/10/29 23:26:05.841,C:\Users\Adriano Galvão\Documents\InfoSistemas\InfoSis.dproj=D:\[5] - Sistemas\[5] - Sistemas\Project1.dproj</Transaction>
-    <Transaction>2019/10/29 23:33:57.205,C:\Users\Adriano Galvão\Documents\InfoSistemas\UFMenu.fmx=C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.fmx</Transaction>
-    <Transaction>2019/10/29 23:33:57.205,C:\Users\Adriano Galvão\Documents\InfoSistemas\UFMenu.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.pas</Transaction>
-    <Transaction>2019/10/30 00:41:54.887,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
-    <Transaction>2019/10/30 00:42:13.681,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
-    <Transaction>2019/10/30 00:42:37.167,C:\Users\Adriano Galvão\Documents\InfoSistemas\Controllers\Client.Controller.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>2019/10/29 22:10:43.000.172,=D:\[5] - Sistemas\[5] - Sistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/29 22:31:39.000.218,=D:\[5] - Sistemas\[5] - Sistemas\Unit2.pas</Transaction>
+    <Transaction>2019/10/29 22:33:13.000.326,D:\[5] - Sistemas\[5] - Sistemas\Unit2.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Client.VO.pas</Transaction>
+    <Transaction>2019/10/29 23:25:24.000.356,D:\[5] - Sistemas\[5] - Sistemas\Unit1.fmx=C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.fmx</Transaction>
+    <Transaction>2019/10/29 23:25:24.000.356,D:\[5] - Sistemas\[5] - Sistemas\Unit1.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.pas</Transaction>
+    <Transaction>2019/10/29 23:25:39.000.064,C:\Users\Adriano Galvão\Documents\InfoSistemas\Client.VO.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\VOs\Client.VO.pas</Transaction>
+    <Transaction>2019/10/29 23:26:05.000.841,D:\[5] - Sistemas\[5] - Sistemas\Project1.dproj=C:\Users\Adriano Galvão\Documents\InfoSistemas\InfoSis.dproj</Transaction>
+    <Transaction>2019/10/29 23:33:57.000.205,C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.fmx=C:\Users\Adriano Galvão\Documents\InfoSistemas\UFMenu.fmx</Transaction>
+    <Transaction>2019/10/29 23:33:57.000.205,C:\Users\Adriano Galvão\Documents\InfoSistemas\FMenu.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\UFMenu.pas</Transaction>
+    <Transaction>2019/10/30 00:41:54.000.887,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 00:42:13.000.681,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 00:42:37.000.167,C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Controllers\Client.Controller.pas</Transaction>
+    <Transaction>2019/10/30 16:19:16.765,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 16:19:33.249,C:\Users\Adriano Galvão\Documents\InfoSistemas\VOs\JSon.VO.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 17:03:24.052,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 17:03:39.879,C:\Users\Adriano Galvão\Documents\InfoSistemas\Controllers\JSon.Controller.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 18:36:43.233,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 18:36:57.774,C:\Users\Adriano Galvão\Documents\InfoSistemas\Controllers\JSon.Controller.Base.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 22:18:21.864,C:\Users\Adriano Galvão\Documents\InfoSistemas\Controllers\JSon.Controller.Base.pas=</Transaction>
+    <Transaction>2019/10/30 22:27:55.170,=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2019/10/30 22:28:07.004,C:\Users\Adriano Galvão\Documents\InfoSistemas\Controllers\XML.Controller.pas=C:\Users\Adriano Galvão\Documents\InfoSistemas\Unit1.pas</Transaction>
   </Transactions>
-  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
-  </ActiveMobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
 </BorlandProject>
